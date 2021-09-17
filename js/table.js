@@ -34,20 +34,6 @@ d3.csv("data/uz_table.csv").then(function(data) {
                 return '<a href="https://ring.org.ua/edr/uk/company/'+d.tot_wagons+'" target="_blank">'+d.tot_wagons+'</a>'}}         
         ]
         });
-
-
-        d3.select(window).on("resize", function(){
-
-        })
-        
-
-
-        //додаємо дані в таблицю
-    /*     datatable.rows.add(data).draw(); */
-        
-
-
-
 });
 
 

@@ -1,4 +1,9 @@
-$charts_background: #e5ebe6;
+@import "header";
+@import "footer";
+
+
+$yellow: #ffffda;
+$green: #e5ebe6;
 
 @font-face {
   font-family: 'e-UkraineHead-Medium';
@@ -40,25 +45,32 @@ $charts_background: #e5ebe6;
   font-weight: 300;
 }
 
+
+
 body {
   font-family: 'e-Ukraine-Light', sans-serif;
   margin:0;
   padding:0;
 }
 
-.background {
-  background-color: #e5ebe6;
-  padding: 50px 0;
+.hr {
+  border-bottom: 1px solid black;
+  margin-top: 100px;
+  grid-column: 1/-1;
 }
 
+
 .yellow-incut {
-  background-color: #ffffda;; 
+  background-color: $yellow;
   min-height: 300px;
 }
 
 .green-incut {
-  background-color: #e5ebe6;
+  background-color: $green;
 }
+
+
+/* collapsible button */
 
 #show-why {
   grid-column: 1/4; 
@@ -71,66 +83,6 @@ body {
   overflow:hidden; 
   margin-bottom: 50px;
 }
-
-
-/*-----------------------------------
---------------- slider --------------
--------------------------------------*/
-
-.slider-container {
-  grid-column: 1/-1;
-  font-family: 'e-Ukraine-Regular', sans-serif;
-  margin: 50px auto;
-  width: calc(100% - 2em);
-  padding: 1em;
-  max-width: 1680px;
-  overflow-x: hidden;
-  @media(min-width: 1680px){
-    width: 1408px;
-  }
-  @media(min-width: 1280px) and (max-width: 1679px){
-    width: 1120px;
-  }
-  @media(min-width: 992px) and (max-width: 1279px){
-    width: 864px;
-  }
-  @media(min-width: 991px){
-    max-width: 100%;
-  }
-}
-
-.slider-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.slider-wrapper {
-  max-width: 1000px;
-  width: 90%;
-  overflow-x: hidden;
-
-}
-
-
-.slider {
-  display: flex;
-  width: max-content;
-  transition: margin-left 1s;
-
-
-  .slider-item {
-    width: 300px;
-    margin-right: 50px;
-
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
-
 
 .button-black {
   grid-column: 1/2;
@@ -153,33 +105,34 @@ body {
   }
 }
 
-.arrow {  
-    width: 80px;
-    height: 80px; 
-    position:relative;
-    
-    &:after, &:before {
-      content:'';
-      width:0;
-      height:0;
-      border-style:solid;
-      border-color:transparent;
-      border-left-width: 20px;
-      border-right-width: 20px;
-      border-top-width:15px;
-      position:absolute;
-      left:10px
-    }
-    &:before {
-      border-top-color: darken(grey, 25%);
-      top:15px;
-    }
-    &:after {
-      border-top-color: #e5ebe6;
-      top:13px;
-    }
-  }
+/* collapsible arrow */
 
+.arrow {  
+  width: 80px;
+  height: 80px; 
+  position:relative;
+  
+  &:after, &:before {
+    content:'';
+    width:0;
+    height:0;
+    border-style:solid;
+    border-color:transparent;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    border-top-width:15px;
+    position:absolute;
+    left:10px
+  }
+  &:before {
+    border-top-color: darken(grey, 25%);
+    top:15px;
+  }
+  &:after {
+    border-top-color: #e5ebe6;
+    top:13px;
+  }
+}
 
 .down {
   transform: rotate(45deg);
@@ -187,252 +140,8 @@ body {
 }
 
 
-#table_wrapper {
-  grid-column:1/4;
-  max-width: 100%;
-  margin: 50px auto;
 
-  tr:hover {
-    background-color: #e5ebe6;
-  }
-
-  a {
-    text-decoration: none;
-    border-bottom: 0;
-  }
-
-  @media screen and (max-width: 800px) {
-    table {
-      border: 0;
-      max-width:90vw;
-    }
-  
-    table caption {
-      font-size: 1.3em;
-    }
-    
-    table thead {
-      border: none;
-      clip: rect(0 0 0 0);
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
-    }
-    
-    table tr {
-      border-bottom: 3px solid #ddd;
-      display: block;
-      margin-bottom: .625em;
-    }
-    
-    table td {
-      border-bottom: 1px solid #ddd;
-      display: block;
-      font-size: .8em;
-      text-align: left !important;
-      margin-top: 40px;
-      max-width: 80vw;
-      
-    }
-    
-    table td::before {
-      /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
-      content: attr(data-label);
-      float: left;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-top: -30px;
-    }
-    
-    table td:last-child {
-      border-bottom: 0;
-    }
-  }
-}
-
-
-h3 {
-  font-family: 'e-Ukraine-Regular', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 32px;
-  color: #000000;
-}
-
-h4 {
-  font-family: 'e-Ukraine-Regular', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 28px;
-  color: #000000;
-}
-
-
-.hr {
-  border-bottom: 1px solid black;
-  margin-top: 100px;
-  grid-column: 1/-1;
-}
-
-/*-----------------------------------
---------------- header --------------
--------------------------------------*/
-header {
-  position: relative;
-  background-color: $charts_background;
-  width: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  @media(max-width: 991px) {
-    display: block;
-    height: max-content;
-  }
-
-  .image-container {
-    grid-row: 1/2;
-    grid-column: 2/3;
-    width: 100%;
-    min-height: 40vh;
-    @media(max-width: 768px){
-      display: none;
-    }
-
-    img {
-      width: 100%;
-      @media(min-width: 1480px) {
-        margin-top: -15vh;
-      }
-
-      @media(max-width: 991px){
-        margin-top: -10vh;
-      }
-    }
-  }
-
-
-  .title-wrapper {
-    margin-top: -50px;
-    display: flex;
-    grid-column: 1/7;
-    grid-row: 1/2;
-    @media(max-width: 991px){
-      margin-top: 0;
-    }
-
-    .title {
-      margin: auto;
-      @media(max-width: 991px){
-        margin: 50px 0;
-      }
-      @media(max-width: 479px){
-        width: 90%;
-        margin:  50px auto;
-      }
-
-      h1 {
-        font-family: 'e-UkraineHead-Medium', sans-serif;
-        font-weight: normal;
-        font-size: 56px;
-        line-height: 60px;
-        letter-spacing: -0.02em;
-        @media(max-width: 1280px) and (min-width: 992px){
-          font-size: calc(38px + 1vw);
-          line-height: calc(40px + 1vw);
-        }
-        @media(max-width: 991px){
-          font-size: 46px;
-          width: 100%;
-          margin: auto;
-        }
-      }
-
-    } // title end
-  } // title-wrapper end
-
-
-  .logo-wrapper {
-    grid-column: 1/-1;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    grid-row: 2/3;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    background-color: rgba(255,255,255, 0.7);
-    @media(max-width:991px){
-      position: relative;
-      height: max-content;
-    }
-
-    .logo-list {
-      grid-column: 1/-1;
-      margin: 0 auto;
-      padding: 5px 0;
-      width: 100%;
-      height: max-content;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      @media(max-width: 991px){
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: auto;
-      }
-      @media(max-width: 479px){
-        width: 100%;
-        margin: auto;
-      }
-
-      img {
-        height: 60%;
-        margin: 0 1em 0 0;
-        display: block;
-        width: auto;
-        @media(max-width: 991px){
-          margin: 0.8em;
-        }
-      }
-
-      #cyfra,
-      #usaid,
-      #eurasia {
-        max-height: 40px;
-        height: calc(20px + 2vw);
-        @media(max-width:991px){
-          height: calc(25px + 2vw);
-        }
-      }
-
-      #ternopil {
-        max-height: 80px;
-      }
-
-      #ukaid {
-        max-height: 50px;
-        height: calc(30px + 2vw);
-        @media(max-width:991px){
-          height: calc(35px + 2vw);
-        }
-      }
-
-      #texty {
-        max-height: 20px;
-      }
-
-    } // logo list end
-  } // logo wrapper end
-}
+/* main styles */
 
 .content {
   grid-row: 1/2;
@@ -467,8 +176,7 @@ header {
 
 
 
-/* ---------------------------------------
-   -----------  основний текст ---------- */
+/* основний текст */
 
 h2 {
   font-family: 'e-Ukraine-Regular', sans-serif;
@@ -507,7 +215,6 @@ p, ul, li {
   font-weight: 300;
   font-size: 18px;
   line-height: 1.6;
-  //line-height: 24px;
   letter-spacing: -0.02em;
 }
 
@@ -576,79 +283,127 @@ a {
   }
 }
 
-footer {
-  margin-top: 100px;
-  padding: 60px 0;
-  background-color: #000000;
 
+/* slider */
 
-  p {
-    width: 100%;
-    font-family: 'e-Ukraine-Regular', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    margin: 10px 0;
-    letter-spacing: -0.02em;
-    color: #ECE9E5;
+.slider-container {
+  grid-column: 1/-1;
+  font-family: 'e-Ukraine-Regular', sans-serif;
+  margin: 50px auto;
+  width: calc(100% - 2em);
+  padding: 1em;
+  max-width: 1680px;
+  overflow-x: hidden;
+  @media(min-width: 1680px){
+    width: 1408px;
   }
-
-  //колонка "створено текстами"
-  .created-by-texty {
-    grid-column: 1/6;
-    margin-bottom: 50px;
+  @media(min-width: 1280px) and (max-width: 1679px){
+    width: 1120px;
   }
+  @media(min-width: 992px) and (max-width: 1279px){
+    width: 864px;
+  }
+  @media(min-width: 991px){
+    max-width: 100%;
+  }
+}
+
+.slider-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider-wrapper {
+  max-width: 1000px;
+  width: 90%;
+  overflow-x: hidden;
+}
 
 
-  //колонка "пошириити"
-  .socio-wrapper {
-    grid-column: -3/-1;
+.slider {
+  display: flex;
+  width: max-content;
+  transition: margin-left 1s;
 
-    //контейнер з іконками соцмереж
-    .socio-icons-box {
-      display: flex;
-    }
 
-    //контейнер з однією іконкою
-    .icon-wrapper {
-      margin-right: 12px;
-      position: relative;
-      width: 36px;
-      height: 36px;
-    }
+  .slider-item {
+    width: 300px;
+    margin-right: 50px;
 
-    //рамка іконки
-    .icon-box {
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      width: 36px;
-      height: 36px;
-    }
 
-    //фб-іконка
-    #fb {
-      position: absolute;
-      left: 36.11%;
-      right: 36.11%;
-      top: 25%;
-      bottom: 22.22%;
-      width: 10px;
-      height: 19px;
-    }
-
-    //тв-іконка
-    #tw {
-      position: absolute;
-      left: 25%;
-      right: 25%;
-      top: 27.78%;
-      bottom: 30.56%;
-      width: 18px;
-      height: 15px;
+    img {
+      width: 100%;
     }
   }
 }
+
+
+/* table */
+
+#table_wrapper {
+  grid-column:1/4;
+  max-width: 100%;
+  margin: 50px auto;
+
+  tr:hover {
+    background-color: $green;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    table {
+      border: 0;
+      max-width:90vw;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: left !important;
+      margin-top: 40px;
+      max-width: 80vw;
+      
+    }
+    
+    table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: -30px;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+

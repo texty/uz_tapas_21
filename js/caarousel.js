@@ -1,6 +1,3 @@
-/**
- * Created by yevheniia on 14.08.20.
- */
 d3.select("#next").on("click", function(){
     d3.select("#back").style("opacity", 1);
     let currentLeft = Math.abs(parseInt(d3.select(".slider").style("margin-left").replace("px", "")));
@@ -14,6 +11,7 @@ d3.select("#next").on("click", function(){
         d3.select(this).style("opacity", 0.2)
     }
 });
+
 
 d3.select("#back").on("click", function(){
     d3.select("#next").style("opacity", 1);

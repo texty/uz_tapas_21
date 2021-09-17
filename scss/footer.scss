@@ -1,0 +1,76 @@
+footer {
+    margin-top: 100px;
+    padding: 60px 0;
+    background-color: #000000;
+  
+  
+    p {
+      width: 100%;
+      font-family: 'e-Ukraine-Regular', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 10px 0;
+      letter-spacing: -0.02em;
+      color: #ECE9E5;
+    }
+  
+    //колонка "створено текстами"
+    .created-by-texty {
+      grid-column: 1/6;
+      margin-bottom: 50px;
+    }
+  
+  
+    //колонка "пошириити"
+    .socio-wrapper {
+      grid-column: -3/-1;
+  
+      //контейнер з іконками соцмереж
+      .socio-icons-box {
+        display: flex;
+      }
+  
+      //контейнер з однією іконкою
+      .icon-wrapper {
+        margin-right: 12px;
+        position: relative;
+        width: 36px;
+        height: 36px;
+      }
+  
+      //рамка іконки
+      .icon-box {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 36px;
+        height: 36px;
+      }
+  
+      //фб-іконка
+      #fb {
+        position: absolute;
+        left: 36.11%;
+        right: 36.11%;
+        top: 25%;
+        bottom: 22.22%;
+        width: 10px;
+        height: 19px;
+      }
+  
+      //тв-іконка
+      #tw {
+        position: absolute;
+        left: 25%;
+        right: 25%;
+        top: 27.78%;
+        bottom: 30.56%;
+        width: 18px;
+        height: 15px;
+      }
+    }
+  }

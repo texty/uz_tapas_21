@@ -1,0 +1,148 @@
+header {
+    position: relative;
+    background-color: #e5ebe6;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media(max-width: 991px) {
+      display: block;
+      height: max-content;
+    }
+  
+    .image-container {
+      grid-row: 1/2;
+      grid-column: 2/3;
+      width: 100%;
+      min-height: 40vh;
+      @media(max-width: 768px){
+        display: none;
+      }
+  
+      img {
+        width: 100%;
+        @media(min-width: 1480px) {
+          margin-top: -15vh;
+        }
+  
+        @media(max-width: 991px){
+          margin-top: -10vh;
+        }
+      }
+    }
+  
+  
+    .title-wrapper {
+      margin-top: -50px;
+      display: flex;
+      grid-column: 1/7;
+      grid-row: 1/2;
+      @media(max-width: 991px){
+        margin-top: 0;
+      }
+  
+      .title {
+        margin: auto;
+        @media(max-width: 991px){
+          margin: 50px 0;
+        }
+        @media(max-width: 479px){
+          width: 90%;
+          margin:  50px auto;
+        }
+  
+        h1 {
+          font-family: 'e-UkraineHead-Medium', sans-serif;
+          font-weight: normal;
+          font-size: 56px;
+          line-height: 60px;
+          letter-spacing: -0.02em;
+          @media(max-width: 1280px) and (min-width: 992px){
+            font-size: calc(38px + 1vw);
+            line-height: calc(40px + 1vw);
+          }
+          @media(max-width: 991px){
+            font-size: 46px;
+            width: 100%;
+            margin: auto;
+          }
+        }
+  
+      } // title end
+    } // title-wrapper end
+  
+  
+    .logo-wrapper {
+      grid-column: 1/-1;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      grid-row: 2/3;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      background-color: rgba(255,255,255, 0.7);
+      @media(max-width:991px){
+        position: relative;
+        height: max-content;
+      }
+  
+      .logo-list {
+        grid-column: 1/-1;
+        margin: 0 auto;
+        padding: 5px 0;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media(max-width: 991px){
+          justify-content: center;
+          flex-wrap: wrap;
+          margin: auto;
+        }
+        @media(max-width: 479px){
+          width: 100%;
+          margin: auto;
+        }
+  
+        img {
+          height: 60%;
+          margin: 0 1em 0 0;
+          display: block;
+          width: auto;
+          @media(max-width: 991px){
+            margin: 0.8em;
+          }
+        }
+  
+        #cyfra,
+        #usaid,
+        #eurasia {
+          max-height: 40px;
+          height: calc(20px + 2vw);
+          @media(max-width:991px){
+            height: calc(25px + 2vw);
+          }
+        }
+  
+        #ternopil {
+          max-height: 80px;
+        }
+  
+        #ukaid {
+          max-height: 50px;
+          height: calc(30px + 2vw);
+          @media(max-width:991px){
+            height: calc(35px + 2vw);
+          }
+        }
+  
+        #texty {
+          max-height: 20px;
+        }
+  
+      } // logo list end
+    } // logo wrapper end
+  }

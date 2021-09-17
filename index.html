@@ -324,6 +324,9 @@
 <script src="js/stacked__2.js"></script> -->
 
 <script>
+    d3.selectAll("a")
+    .attr("target", "_blank")
+
     d3.selectAll(".button-black")
         .on("click", function(){
             let showMore = d3.select("#project-about");

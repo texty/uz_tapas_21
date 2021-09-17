@@ -166,6 +166,21 @@ body {
 }
 
 
+#table_wrapper {
+  grid-column:1/4;
+  margin: 50px auto;
+
+  tr:hover {
+    background-color: #e5ebe6;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 0;
+  }
+}
+
+
 h3 {
   font-family: 'e-Ukraine-Regular', sans-serif;
   font-style: normal;

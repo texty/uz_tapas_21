@@ -34,6 +34,10 @@
     <!-- Other Meta Tags -->
     <meta name="title" content="Куди котиться Укрзалізниця?">
     <meta name="description" content="Чи «прозорішає» український ринок">
+
+
+    <!-- Styles -->
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet"/>
 
 
@@ -218,7 +222,22 @@
          <p>Обов’язковою передумовою участі в торгах, що проходять у системі Prozorro.Продажі, є наявність так званого Єдиного договору на організацію вантажних перевезень. На сьогодні достеменно невідомо, зі скількома компаніями Укрзалізниця має активні договори. Дані відкритого АРІ Prozorro.Продажі свідчать, що станом на червень 2021-го участь у торгах взяло 140 компаній. Рівно 100 із них уклали з Укрзалізницею хоча б один договір на право використання вантажних вагонів.
         </p>
 
-        <text>Інтерактивна таблиця</text>
+
+        <p><i>Щоб подивитись профіль підприємства у державних реєстрах на сайті Ring.org.ua, клікніть на потрібний рядок у таблиці нижче.</i></p>
+
+        <table id="table" class="responsive">
+            <thead>
+                <tr>
+                    <th>Назва компанії</th>
+                    <th>К-ть виграних аукціонів</th>
+                    <th>Середня ціна оренди вагона, грн/доба</th>
+                    <th>К-ть зафрахтованих вагоновідправлень</th>
+                    
+        
+        
+                </tr>
+                </thead>
+        </table>
 
         <p>Найбільшу кількість вагоновідправлень дістали компанії та підприємства, що входять до структури фінансово-промислової групи «СКМ»: ТОВ «Метінвест-Шиппінг», ПРАТ «Північний ГЗК», а також ДТЕК «Павлоградвугілля». Ці компанії регулярно перемагають на аукціонах від Укрзалізниці та укладають із нею найбільшу кількість договорів. Чимало вагонів орендують також компанії, що перевозять та видобувають щебінь – наприклад ТОВ «АС-ГРАНІТ». Проте ці вантажовідправники й близько не можуть рівнятися із металургійною частиною групи «СКМ» за часткою використання вантажних вагонів Укрзалізниці.
         </p>
@@ -297,14 +316,21 @@
 
 
 <script charset="utf-8" src="lib/d3v5_min.js"></script>
-<script src="https://unpkg.com/popper.js@1"></script>
-<script src="https://unpkg.com/tippy.js@5"></script>
+
+<!-- <script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5"></script> -->
 <script charset="utf-8" src="lib/share-behavior.js"></script>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+
 <script src="js/caarousel.js"></script>
-<script src="js/variables.js"></script>
+<script src="js/table.js"></script>
+<!-- <script src="js/variables.js"></script>
 <script src="js/line_chart.js"></script>
 <script src="js/stacked__1.js"></script>
-<script src="js/stacked__2.js"></script>
+<script src="js/stacked__2.js"></script> -->
 
 <script>
     d3.selectAll(".button-black")

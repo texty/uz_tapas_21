@@ -167,6 +167,22 @@ body {
   -webkit-transform: rotate(45deg);
 }
 
+#table_wrapper {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  margin: 50px auto;
+}
+
+#table_wrapper tr:hover {
+  background-color: #e5ebe6;
+}
+
+#table_wrapper a {
+  text-decoration: none;
+  border-bottom: 0;
+}
+
 h3 {
   font-family: 'e-Ukraine-Regular', sans-serif;
   font-style: normal;

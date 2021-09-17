@@ -34,6 +34,31 @@ body {
   padding: 50px 0;
 }
 
+.yellow-incut {
+  background-color: #ffffda;
+  min-height: 300px;
+}
+
+.green-incut {
+  background-color: #e5ebe6;
+}
+
+#show-why {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  cursor: pointer;
+}
+
+#more-why {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  max-height: 1px;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
 /*-----------------------------------
 --------------- slider --------------
 -------------------------------------*/

@@ -241,9 +241,9 @@
             <thead>
                 <tr>
                     <th>Назва компанії</th>
-                    <th>К-ть виграних аукціонів</th>
+                    <th>Виграних аукціонів</th>
                     <th>Середня ціна оренди вагона, грн/доба</th>
-                    <th>К-ть зафрахтованих вагоновідправлень</th>
+                    <th>Зафрахтованих відправлень</th>
                 </tr>
                 </thead>
         </table>
@@ -325,7 +325,7 @@
 
 <script>
     d3.selectAll("a")
-    .attr("target", "_blank")
+        .attr("target", "_blank");
 
     d3.selectAll(".button-black")
         .on("click", function(){

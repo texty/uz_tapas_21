@@ -189,6 +189,7 @@ body {
 
 #table_wrapper {
   grid-column:1/4;
+  max-width: 100%;
   margin: 50px auto;
 
   tr:hover {
@@ -198,6 +199,60 @@ body {
   a {
     text-decoration: none;
     border-bottom: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    table {
+      border: 0;
+      max-width:90vw;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: left !important;
+      margin-top: 40px;
+      max-width: 80vw;
+      
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: -30px;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
   }
 }
 
@@ -294,6 +349,7 @@ header {
           line-height: calc(40px + 1vw);
         }
         @media(max-width: 991px){
+          font-size: 46px;
           width: 100%;
           margin: auto;
         }

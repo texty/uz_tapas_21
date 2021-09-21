@@ -200,6 +200,7 @@
     </div>
 
     <div id="chart-1" class="yellow-incut">
+        <div class="text"></div>
         <!-- <img style="max-width: 100%" src="img/01.svg"/> -->
     </div>
 
@@ -213,6 +214,7 @@
 
 
     <div id="chart-2" class="yellow-incut">
+        <div class="text"></div>
         <!-- <img style="max-width: 100%" src="img/02.svg"/> -->
     </div>
 
@@ -311,17 +313,19 @@
 
 
 <script>
-     d3.xml("img/01.svg").then(function (data) {
-        d3.select("#chart-1")
+     d3.xml("img/01_.svg").then(function (data) {
+        d3.select("#chart-1").select(".text")
                 .node()
-                .append(data.documentElement);
+                .append(data.documentElement)
+                .style("grid-column", "1/-1");
     });
 
 
-    d3.xml("img/02.svg").then(function (data) {
-        d3.select("#chart-2")
+    d3.xml("img/02_.svg").then(function (data) {
+        d3.select("#chart-2").select(".text")
                 .node()
-                .append(data.documentElement);
+                .append(data.documentElement)
+                .style("grid-column", "1/-1");
     });
 </script>
 

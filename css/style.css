@@ -358,6 +358,7 @@ body {
 }
 
 .button-black {
+  cursor: pointer;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
@@ -495,6 +496,7 @@ h4 {
   line-height: 28px;
   color: #000000;
   letter-spacing: -0.02em;
+  margin-bottom: 0.5em;
 }
 
 p, ul, li {
@@ -639,7 +641,7 @@ a {
 }
 
 .slider-wrapper {
-  max-width: 1000px;
+  max-width: 1200px;
   width: 90%;
   overflow-x: hidden;
 }
@@ -656,8 +658,8 @@ a {
 }
 
 .slider .slider-item {
-  width: 300px;
-  margin-right: 50px;
+  width: 380px;
+  margin-right: 20px;
 }
 
 .slider .slider-item img {

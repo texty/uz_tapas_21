@@ -1,0 +1,72 @@
+footer {
+  margin-top: 100px;
+  padding: 60px 0;
+  background-color: #000000;
+}
+
+footer p {
+  width: 100%;
+  font-family: 'e-Ukraine-Regular', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 10px 0;
+  letter-spacing: -0.02em;
+  color: #ECE9E5;
+}
+
+footer .created-by-texty {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  margin-bottom: 50px;
+}
+
+footer .socio-wrapper {
+  grid-column: -3/-1;
+}
+
+footer .socio-wrapper .socio-icons-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .socio-wrapper .icon-wrapper {
+  margin-right: 12px;
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+footer .socio-wrapper .icon-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 36px;
+  height: 36px;
+}
+
+footer .socio-wrapper #fb {
+  position: absolute;
+  left: 36.11%;
+  right: 36.11%;
+  top: 25%;
+  bottom: 22.22%;
+  width: 10px;
+  height: 19px;
+}
+
+footer .socio-wrapper #tw {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 27.78%;
+  bottom: 30.56%;
+  width: 18px;
+  height: 15px;
+}
+/*# sourceMappingURL=footer.css.map */

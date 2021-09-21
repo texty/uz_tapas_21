@@ -612,13 +612,13 @@ a {
 
 @media (min-width: 1280px) and (max-width: 1679px) {
   .slider-container {
-    width: 1120px;
+    width: 1200px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1279px) {
   .slider-container {
-    width: 864px;
+    width: 800px;
   }
 }
 
@@ -658,8 +658,8 @@ a {
 }
 
 .slider .slider-item {
-  width: 380px;
-  margin-right: 20px;
+  width: 390px;
+  margin-right: 10px;
 }
 
 .slider .slider-item img {
